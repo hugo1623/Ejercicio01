@@ -8,30 +8,19 @@ namespace HolaMundo
     {
         static void Main(string[] args)
         {
-            EscribiendoHolaMundo();
-            EscribirEnLaConsola("Me llamo Hugo");
-            IdentificadorDelMetodo("Valor1", "Valor2", 9);
-            int sumando1 = 5;
-            int sumando2 = 7;
-            int resultado = Suma(sumando1,sumando2);
+            
+            int multiplicando1 = 5;
+            int multiplicando2 = 7;
+            int multiplicando3 = 2;
+            int resultado = Multiplicacion(multiplicando1, multiplicando2, multiplicando3);
             Console.WriteLine(resultado);
             Console.Read();
         }
-        //metodo Suma
-         static int Suma(int a, int b)
+        //Método Multiplicación
+         static int Multiplicacion(int a, int b, int c)
         {
-            return a + b;
+            return a * b * c;
         }
-         static void EscribiendoHolaMundo()
-        {
-            Console.WriteLine("Hola Mundo");
-        }
-        static void EscribirEnLaConsola(string valor)
-        {
-            Console.WriteLine(valor);
-        }
-        static void IdentificadorDelMetodo(string parametro1, string parametro2, int etc)
-        {
-        }
+        
     }
 }

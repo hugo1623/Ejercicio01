@@ -4,21 +4,34 @@ using System;
 
 namespace HolaMundo
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            //Ejemplo de declaraciones de una variable
-            int mes = 9;
-            string nombre= "Hugo Luis";
-            bool procesoTerminado = true;
-
-            // Interpolacion de cadena
-            Console.WriteLine(
-                $"Nombre: {nombre} \n" +
-                $"Mes: {mes} \n" +
-                $"Proceso: {procesoTerminado}\n");
+            EscribiendoHolaMundo();
+            EscribirEnLaConsola("Me llamo Hugo");
+            IdentificadorDelMetodo("Valor1", "Valor2", 9);
+            int sumando1 = 5;
+            int sumando2 = 7;
+            int resultado = Suma(sumando1,sumando2);
+            Console.WriteLine(resultado);
             Console.Read();
+        }
+        //metodo Suma
+         static int Suma(int a, int b)
+        {
+            return a + b;
+        }
+         static void EscribiendoHolaMundo()
+        {
+            Console.WriteLine("Hola Mundo");
+        }
+        static void EscribirEnLaConsola(string valor)
+        {
+            Console.WriteLine(valor);
+        }
+        static void IdentificadorDelMetodo(string parametro1, string parametro2, int etc)
+        {
         }
     }
 }

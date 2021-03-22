@@ -4,32 +4,40 @@ using System;
 
 namespace HolaMundo
 {
-    public class Program
+     class Program
     {
-
-        //Hacer un programa que le guste al usuario su nombre y edad, posterior a eso debe mostrar un mensaje
-        //en pantalla con el nombre del usuario y su edad.
-        //Pista1: Utilice console.ReadLine para leer la información que ingrese el usuario.
-        //Pista2: utilice int.Parse para convertir de tipo string a tipo int. 
         static void Main(string[] args)
+        //Instanciar la clase persona
+        //Persona es tipo de la variable que creamos y p el nombre de la variable 
         {
-            PreguntaNombreYEdad();
+            Persona p = new Persona();
+            p.Nombre = "Hugo";
+            p.Edad = 26;
+            p.Direccion = "Las Magnolias";
+            p.MostrarDatosEnConsola();
+
+            Persona p2 = new Persona();
+            p2.Nombre = "Kyra";
+            p2.Edad = 5;
+            p2.Direccion = "San Isidro";
+            p2.MostrarDatosEnConsola();
+
             Console.Read();
         }
-        static void PreguntaNombreYEdad()
+        //Clase persona
+         class Persona
         {
-            string nombre;
-            int edad;
+            public string Nombre;
+            public int Edad;
+            public string Direccion;
 
-            Console.Write("Ingrese su Nombre : ");
-            nombre = Console.ReadLine();
 
-            Console.Write("Ingrese su Edad : ");
-            edad = int.Parse(Console.ReadLine());
-
-            String output = string.Format("Su nombre es {0} y tiene {1} amos de edad", nombre, edad);
-            Console.WriteLine(output);
+            public void MostrarDatosEnConsola()
+            {
+                string output = "El nombre es : {0}, la edad es :{1}, la dirección es: {2}";
+                output = string.Format(output, Nombre, Edad, Direccion);
+                Console.WriteLine(output);
+            }
         }
-
     }
 }

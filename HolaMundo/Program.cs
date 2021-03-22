@@ -7,37 +7,32 @@ namespace HolaMundo
      class Program
     {
         static void Main(string[] args)
-        //Instanciar la clase persona
-        //Persona es tipo de la variable que creamos y p el nombre de la variable 
+
         {
-            Persona p = new Persona();
-            p.Nombre = "Hugo";
-            p.Edad = 26;
-            p.Direccion = "Las Magnolias";
-            p.MostrarDatosEnConsola();
+            var a = 1;
+            var b = 2;
+            var c = 8;
+            var d = 9;
 
-            Persona p2 = new Persona();
-            p2.Nombre = "Kyra";
-            p2.Edad = 5;
-            p2.Direccion = "San Isidro";
-            p2.MostrarDatosEnConsola();
+            Console.WriteLine("{0}+{1}={2}", a,b, a+b);
+            Console.WriteLine("{0}-{1}={2}", c, a, c - a);
+            Console.WriteLine("{0}*{1}={2}", b,c , b * c);
+            Console.WriteLine("{0}/{1}={2}", c, b, c/ b);
+            Console.WriteLine("{0}/{1}={2}", a, b, a / b);
 
-            Console.Read();
+            Console.WriteLine("");
+            //Incremento en 1 el valor de a
+            a++;
+            Console.WriteLine("El incremento de {0} es {1} pues x++= x+1", a - 1, a);
+
+            //Disminuyo en 1 el valor de a
+            a--;
+            Console.WriteLine("El decremento de {0} es {1} pues x--= x-1", a + 1, a);
+            Console.WriteLine("");
+            Console.WriteLine("Residuos");
+            Console.WriteLine("{0}%{1}={2}", b, a, b % a);
+            Console.WriteLine("{0}%{1}={2}", d, b, d % b);
         }
-        //Clase persona
-         class Persona
-        {
-            public string Nombre;
-            public int Edad;
-            public string Direccion;
 
-
-            public void MostrarDatosEnConsola()
-            {
-                string output = "El nombre es : {0}, la edad es :{1}, la dirección es: {2}";
-                output = string.Format(output, Nombre, Edad, Direccion);
-                Console.WriteLine(output);
-            }
-        }
     }
 }

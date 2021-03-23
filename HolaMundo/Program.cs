@@ -8,35 +8,22 @@ namespace HolaMundo
     {
         static void Main(string[] args)
         {
-            var a = 1;
-            var b = 2;
-            var c = 8;
-            var d = 9;
-
-            Console.WriteLine("Operaciones Lógicas");
-            var booleano = true;
-            Console.WriteLine("Operación Negación: !{0}={1}", booleano,!booleano);
-
-            Console.WriteLine("Conjunción");
-            Console.WriteLine("{0} & {0} = {1}", true, true & true);
-            Console.WriteLine("{0} & {0} = {1}", false, false & false);
-            Console.WriteLine("{0} & {1} = {2}", true, false, true & false);
-            Console.WriteLine("");
-
-            Console.WriteLine("Disyunción Exclusiva");
-            Console.WriteLine("{0} ^ {0} = {1}", true, true ^ true);
-            Console.WriteLine("{0} ^{0} = {1}", false, false ^ false);
-            Console.WriteLine("{0} ^ {1} = {2}", true, false, true ^ false);
-            Console.WriteLine("");
+            DateTime fecha = new DateTime(2021, 03, 22);
+            DateTime fechaConHora = new DateTime(2021, 03, 25, 3, 28, 15);
             
-            Console.WriteLine("Disyunción Inclusiva");
-            Console.WriteLine("{0} | {0} = {1}", true, true | true);
-            Console.WriteLine("{0} | {1} = {2}", true, false, true | false);
-            Console.WriteLine("{0} | {0} = {1}", false, false | false);
-           
-            Console.WriteLine("");
-            Console.Read();Console.Read();
-
+            Console.WriteLine(fecha.ToString());
+            Console.WriteLine(fecha.ToString("MM/dd/yyyy"));
+            Console.WriteLine(fecha.ToString("dd-MM-yy"));
+            Console.WriteLine(fechaConHora.ToString("dd-MM-yy hh:mm:ss"));
+            //Muestra la fecha 45 dias despues de la fecha actual
+            Console.WriteLine(fecha.AddDays(45).ToString());
+            //Que dia de la semana es esa fecha (Lunes 22)
+            Console.WriteLine(fechaConHora.DayOfWeek);
+            Console.WriteLine(fechaConHora.Date);
+            //Cuantos dias hay entre fecha y fechaConHora.
+            Console.WriteLine(fecha.Subtract(fechaConHora).Days);
+            
+            Console.Read();
         }
     }
 }

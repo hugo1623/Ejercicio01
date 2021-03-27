@@ -11,7 +11,7 @@ namespace HolaMundo
         {
             List<string> nombres = new List<string>() { "Hugo", "Kyra", "Dayron" };
 
-             for (int i=0; i<=nombres.Count; i++)
+             for (int i = 0; i < nombres.Count; i++)
              {
                  Console.WriteLine(nombres[i].ToUpper());
              } 

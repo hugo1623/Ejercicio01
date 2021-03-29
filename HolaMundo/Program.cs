@@ -11,11 +11,17 @@ namespace HolaMundo
         {
             List<string> nombres = new List<string>() { "Hugo", "Kyra", "Dayron" };
 
-             for (int i = 0; i < nombres.Count; i++)
-             {
-                 Console.WriteLine(nombres[i].ToUpper());
-             } 
-            Console.Read();                     
+             //for (int i = 0; i < nombres.Count; i++)
+             //{
+             //   //Editando la Lista.
+             //   nombres[i] = nombres[i] + "s";
+             //    Console.WriteLine(nombres[i].ToUpper());
+             //} 
+            foreach (string nombre in nombres)
+            {
+               Console.WriteLine(nombre.ToUpper());
+            }
+              Console.Read();                     
         }     
     }
 }

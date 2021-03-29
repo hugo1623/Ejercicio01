@@ -9,19 +9,17 @@ namespace HolaMundo
     {
         static void Main(string[] args)
         {
-            List<string> nombres = new List<string>() { "Hugo", "Kyra", "Dayron" };
+            List<string> nombres = new List<string>();
 
-            //for (int i = 0; i < nombres.Count; i++)
-            //{
-            //    Console.WriteLine(nombres[i].ToUpper());
-            //}
-
-            int j = 0;
-            while( j< nombres.Count)
+            for (int i = 0 ; i < 10; i++)
             {
-                Console.WriteLine(nombres[j].ToUpper());
-                j++;
+                if(i == 5)
+                {
+                    continue;
+                }
+                Console.WriteLine(i);
             }
+
               Console.Read();                     
         }     
     }

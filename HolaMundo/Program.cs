@@ -5,22 +5,31 @@ using System.Collections.Generic;
 
 namespace HolaMundo
 {
+    enum EstatusOperacion
+    {
+        Exitoso=1,
+        ClienteNoEncontrado=2,
+        ErrorDeSistema=5
+    }
      class Program
     {
         static void Main(string[] args)
         {
-            List<string> nombres = new List<string>();
 
-            for (int i = 0 ; i < 10; i++)
+            int statusOperaciones = 5;
+            if(statusOperaciones == (int)EstatusOperacion.Exitoso)
             {
-                if(i == 5)
-                {
-                    continue;
-                }
-                Console.WriteLine(i);
+                //..
             }
-
-              Console.Read();                     
+            else if (statusOperaciones == (int)EstatusOperacion.ClienteNoEncontrado)
+            {
+                //..
+            }
+            else if (statusOperaciones == (int)EstatusOperacion.ErrorDeSistema)
+            {
+                //..
+            }
+            Console.Read();                     
         }     
     }
 }

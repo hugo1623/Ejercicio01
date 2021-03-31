@@ -5,31 +5,32 @@ using System.Collections.Generic;
 
 namespace HolaMundo
 {
-    enum EstatusOperacion
-    {
-        Exitoso=1,
-        ClienteNoEncontrado=2,
-        ErrorDeSistema=5
-    }
+
      class Program
     {
         static void Main(string[] args)
         {
 
-            int statusOperaciones = 5;
-            if(statusOperaciones == (int)EstatusOperacion.Exitoso)
+            string statusOperaciones = "K15";
+            if(statusOperaciones == EstatusOperaciones._exitoso)
             {
                 //..
             }
-            else if (statusOperaciones == (int)EstatusOperacion.ClienteNoEncontrado)
+            else if (statusOperaciones == EstatusOperaciones._ClienteNoEncontrado)
             {
                 //..
             }
-            else if (statusOperaciones == (int)EstatusOperacion.ErrorDeSistema)
+            else if (statusOperaciones == EstatusOperaciones._ErrorDelSistema)
             {
                 //..
             }
             Console.Read();                     
-        }     
+        }    
+        public static class EstatusOperaciones
+        {
+            public const string _exitoso = "K120";
+            public const string _ClienteNoEncontrado = "P4";
+            public const string _ErrorDelSistema = "K15";
+        }
     }
 }

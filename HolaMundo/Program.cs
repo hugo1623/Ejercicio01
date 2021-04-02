@@ -8,22 +8,27 @@ namespace HolaMundo
     {
         static void Main(string[] args)
         {
-            int a = 6;
-            int b = 3;
-            try
+            var persona = new Persona {nombre = "Luis", edad = 26};
+            persona = null;
+
+            Nullable<int> numero = 45;
+            numero = null;
+            DateTime? fechaDeNacimiento = null;
+            fechaDeNacimiento = new DateTime(2021 / 04 / 02);
+            if(numero.HasValue)
             {
-                int c = a / b;
-                Console.WriteLine($" El resultado es : {c}");
+                Console.WriteLine("El número tiene valor");
             }
-            catch(Exception ex)
+            if(fechaDeNacimiento.HasValue)
             {
-                Console.WriteLine("Existe un error");
-            }
-            finally
-            {
-                Console.WriteLine("Siempre se va a ejecutar");
+                Console.WriteLine("La fecha tiene valor");
             }
             Console.Read();
+        }
+        class Persona
+        {
+                public string nombre;
+                public int edad;
         }
     }
 }

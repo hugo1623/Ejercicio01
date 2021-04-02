@@ -8,30 +8,22 @@ namespace HolaMundo
     {
         static void Main(string[] args)
         {
-            string statusOperaciones = "K15";
-            if(statusOperaciones == EstatusOperaciones._exitoso)
+            int a = 6;
+            int b = 3;
+            try
             {
-                //..
+                int c = a / b;
+                Console.WriteLine($" El resultado es : {c}");
             }
-            else if (statusOperaciones == EstatusOperaciones._ClienteNoEncontrado)
+            catch(Exception ex)
             {
-                //..
+                Console.WriteLine("Existe un error");
             }
-            else if (statusOperaciones == EstatusOperaciones._ErrorDelSistema)
+            finally
             {
-                //..
+                Console.WriteLine("Siempre se va a ejecutar");
             }
-            Console.Read();                     
-        }
-        /// <summary>
-        /// Descripcion del Metodo
-        /// </summary>
-        /// <param name="a">Sumando 1</param>
-        /// <param name="b">Sumando 2</param>
-        /// <returns>Retorna la suma de a y b</returns>
-        private static int Suma(int a, int b)
-        {
-            return a + b;
+            Console.Read();
         }
     }
 }

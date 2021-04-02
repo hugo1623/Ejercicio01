@@ -2,16 +2,12 @@
 
 using Operaciones;
 using System;
-using System.Collections.Generic;
-
 namespace HolaMundo
 {
-
      class Program
     {
         static void Main(string[] args)
         {
-
             string statusOperaciones = "K15";
             if(statusOperaciones == EstatusOperaciones._exitoso)
             {
@@ -26,7 +22,16 @@ namespace HolaMundo
                 //..
             }
             Console.Read();                     
-        }    
-
+        }
+        /// <summary>
+        /// Descripcion del Metodo
+        /// </summary>
+        /// <param name="a">Sumando 1</param>
+        /// <param name="b">Sumando 2</param>
+        /// <returns>Retorna la suma de a y b</returns>
+        private static int Suma(int a, int b)
+        {
+            return a + b;
+        }
     }
 }

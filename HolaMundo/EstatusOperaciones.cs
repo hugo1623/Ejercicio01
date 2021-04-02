@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace Operaciones
 {
+    /// <summary>
+    /// Repositorio de los estatus de operaciones de tarjetad de crédito
+    /// <para> Hugo Luis</para>
+    /// </summary>
     public static class EstatusOperaciones
     {
         public const string _exitoso = "K120";

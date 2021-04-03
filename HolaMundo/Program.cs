@@ -1,34 +1,31 @@
-﻿
-
-using Operaciones;
-using System;
+﻿using System;
+using System.Collections.Generic;
 namespace HolaMundo
 {
-     class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            var persona = new Persona {nombre = "Luis", edad = 26};
-            persona = null;
+            int a = 10;
+            int b = 20;
 
-            Nullable<int> numero = 45;
-            numero = null;
-            DateTime? fechaDeNacimiento = null;
-            fechaDeNacimiento = new DateTime(2021 / 04 / 02);
-            if(numero.HasValue)
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("El número tiene valor");
-            }
-            if(fechaDeNacimiento.HasValue)
-            {
-                Console.WriteLine("La fecha tiene valor");
+                if (i == 5)
+                {
+                    throw new ApplicationException("No me gusta el 5");
+                }
             }
             Console.Read();
         }
+        static int CalcularEdad(DateTime fechaNacimiento)
+        {
+            return -1;
+        }
         class Persona
         {
-                public string nombre;
-                public int edad;
+            public string nombre;
+            public int edad;
         }
     }
 }
